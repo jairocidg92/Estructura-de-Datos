@@ -1,0 +1,545 @@
+\hypertarget{classconjunto}{}\subsection{Referencia de la Clase conjunto}
+\label{classconjunto}\index{conjunto@{conjunto}}
+
+
+Clase conjunto.  
+
+
+
+
+{\ttfamily \#include $<$conjunto.\+h$>$}
+
+\subsubsection*{Tipos públicos}
+\begin{DoxyCompactItemize}
+\item 
+typedef mutacion \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{value\+\_\+type}
+\item 
+typedef unsigned int \hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{size\+\_\+type}
+\item 
+typedef vector$<$ mutacion $>$\+::\hyperlink{classconjunto_a6de33afebdfa3ec058e9c78f28854311}{iterator} \hyperlink{classconjunto_a6de33afebdfa3ec058e9c78f28854311}{iterator}
+\item 
+typedef vector$<$ mutacion $>$\+::\hyperlink{classconjunto_aa3cf9f1ee3fc1682b221c33d9f271e2e}{const\+\_\+iterator} \hyperlink{classconjunto_aa3cf9f1ee3fc1682b221c33d9f271e2e}{const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classconjunto_a16d987f42c679efab01748178ba45891}{conjunto} ()
+\begin{DoxyCompactList}\small\item\em constructor primitivo. \end{DoxyCompactList}\item 
+\hyperlink{classconjunto_ab0944b1f9a0c959ca314ce0debd5def9}{conjunto} (const \hyperlink{classconjunto}{conjunto} \&d)
+\begin{DoxyCompactList}\small\item\em constructor de copia \end{DoxyCompactList}\item 
+pair$<$ \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type}, bool $>$ \hyperlink{classconjunto_a18090b7e99deb491709f95f038b09258}{find} (const string \&chr, const unsigned int \&pos) const 
+\begin{DoxyCompactList}\small\item\em busca una entrada en el conjunto \end{DoxyCompactList}\item 
+pair$<$ \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type}, bool $>$ \hyperlink{classconjunto_a1c2e31946fa1481210cc9b6c80de80ea}{find} (const string \&ID) const 
+\item 
+pair$<$ \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type}, bool $>$ \hyperlink{classconjunto_a3fe1397b6ea109838d28c97e649eebd7}{find} (const \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type} \&e) const 
+\item 
+\hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{conjunto\+::size\+\_\+type} \hyperlink{classconjunto_a08eec66ae9356bea69a3a8e3d6a10694}{count} (const string \&chr, const unsigned int \&pos) const 
+\begin{DoxyCompactList}\small\item\em cuenta cuantas entradas coinciden con los parámetros dados. \end{DoxyCompactList}\item 
+\hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{conjunto\+::size\+\_\+type} \hyperlink{classconjunto_acaed5aea59521f068b4ab510af777e54}{count} (const string \&ID) const 
+\item 
+\hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{conjunto\+::size\+\_\+type} \hyperlink{classconjunto_a1969568dd7cdcd2599e29540bdbf0146}{count} (const \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type} \&e) const 
+\item 
+bool \hyperlink{classconjunto_a1b80ac564092cff71e21d6452f376769}{insert} (const \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type} \&e)
+\begin{DoxyCompactList}\small\item\em Inserta una entrada en el conjunto. \end{DoxyCompactList}\item 
+bool \hyperlink{classconjunto_a3ea4aaba4c87317d49d5fd6091ca9f70}{erase} (const string \&chr, const unsigned int \&pos)
+\begin{DoxyCompactList}\small\item\em Borra una entrada en el conjunto . Busca la entrada con chr/pos o id en el conjunto (utiliza e.\+get\+I\+D() en el tercer caso) y si la encuentra la borra. \end{DoxyCompactList}\item 
+bool \hyperlink{classconjunto_a1bfa5a542034b4dec5a4950d92c4b4a4}{erase} (const string \&ID)
+\item 
+bool \hyperlink{classconjunto_adb87e98f2c127dc030d5861d6f0172c6}{erase} (const \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type} \&e)
+\item 
+void \hyperlink{classconjunto_abf4c49c1a3f356d1e5bc668c8288c040}{clear} ()
+\begin{DoxyCompactList}\small\item\em Borra todas las entradas del conjunto, dejandolo vacio. \end{DoxyCompactList}\item 
+\hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{size\+\_\+type} \hyperlink{classconjunto_a863e1e106e35adda47e7c5e2067295b9}{size} () const 
+\begin{DoxyCompactList}\small\item\em numero de entradas en el conjunto \end{DoxyCompactList}\item 
+bool \hyperlink{classconjunto_afcf4ff3ff3c1f83b63e901efebe93533}{empty} () const 
+\begin{DoxyCompactList}\small\item\em Chequea si el conjunto esta vacio (\hyperlink{classconjunto_a863e1e106e35adda47e7c5e2067295b9}{size()}==0) \end{DoxyCompactList}\item 
+\hyperlink{classconjunto}{conjunto} \& \hyperlink{classconjunto_a2bdce402a4b76117b68fe71c0dffab87}{operator=} (const \hyperlink{classconjunto}{conjunto} \&org)
+\begin{DoxyCompactList}\small\item\em operador de asignación \end{DoxyCompactList}\item 
+\hyperlink{classconjunto_aa3cf9f1ee3fc1682b221c33d9f271e2e}{conjunto\+::const\+\_\+iterator} \hyperlink{classconjunto_a56fe153b3a546c63493ee027bcf3c7cb}{lower\+\_\+bound} (const string \&chr, const unsigned int \&pos)
+\begin{DoxyCompactList}\small\item\em cuenta cuantas entradas hay en el conjunto por debajo (\textquotesingle{}antes\textquotesingle{}, \textquotesingle{}$<$\textquotesingle{}) de los parámetros dados. \end{DoxyCompactList}\item 
+\hyperlink{classconjunto_aa3cf9f1ee3fc1682b221c33d9f271e2e}{conjunto\+::const\+\_\+iterator} \hyperlink{classconjunto_a12c246fa72986d7d4b9f58ad33594022}{lower\+\_\+bound} (const \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type} \&e)
+\item 
+\hyperlink{classconjunto_aa3cf9f1ee3fc1682b221c33d9f271e2e}{conjunto\+::const\+\_\+iterator} \hyperlink{classconjunto_ac6f8693ddce1a58425c05a71e5a6f450}{upper\+\_\+bound} (const string \&chr, const unsigned int \&pos)
+\begin{DoxyCompactList}\small\item\em cuenta cuantas entradas hay en el conjunto por encima (\textquotesingle{}después\textquotesingle{}, \textquotesingle{}$>$\textquotesingle{}) de los parámetros dados. \end{DoxyCompactList}\item 
+\hyperlink{classconjunto_aa3cf9f1ee3fc1682b221c33d9f271e2e}{conjunto\+::const\+\_\+iterator} \hyperlink{classconjunto_a8b0f19b9e37fe5ee0831c34e36f943e5}{upper\+\_\+bound} (const \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type} \&e)
+\item 
+\hyperlink{classconjunto_a6de33afebdfa3ec058e9c78f28854311}{conjunto\+::iterator} \hyperlink{classconjunto_af90b2324c2675dd4751a79f2e2ad8277}{begin} ()
+\begin{DoxyCompactList}\small\item\em begin del conjunto \end{DoxyCompactList}\item 
+\hyperlink{classconjunto_a6de33afebdfa3ec058e9c78f28854311}{conjunto\+::iterator} \hyperlink{classconjunto_adeef17ca21f1fb29f803790c89c1fc56}{end} ()
+\begin{DoxyCompactList}\small\item\em end del conjunto \end{DoxyCompactList}\item 
+\hyperlink{classconjunto_aa3cf9f1ee3fc1682b221c33d9f271e2e}{conjunto\+::const\+\_\+iterator} \hyperlink{classconjunto_aea13fde96ef2566de65be9a8163b1c26}{cbegin} () const 
+\begin{DoxyCompactList}\small\item\em begin del conjunto \end{DoxyCompactList}\item 
+\hyperlink{classconjunto_aa3cf9f1ee3fc1682b221c33d9f271e2e}{conjunto\+::const\+\_\+iterator} \hyperlink{classconjunto_a8f641464f071358f97c6f4a2c59f2117}{cend} () const 
+\item 
+const vector$<$ mutacion $>$ \hyperlink{classconjunto_a0193e4e35a9058612ecbf281dc41e670}{get\+VM} () const 
+\begin{DoxyCompactList}\small\item\em obtiene las mutaciones existentes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classconjunto_adb0ff15cf65817b0b279bae4bf06decb}{cheq\+\_\+rep} () const 
+\begin{DoxyCompactList}\small\item\em Chequea el Invariante de la representacion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ mutacion $>$ \hyperlink{classconjunto_ac85e51076195e0c74574c72d2dffa728}{vm}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+Clase conjunto. 
+
+\hyperlink{classconjunto_a16d987f42c679efab01748178ba45891}{conjunto\+::conjunto}, find, size, Tipos \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type}, \hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{conjunto\+::size\+\_\+type} Descripción
+
+Un conjunto es un contenedor que permite almacenar en orden creciente un conjunto de elementos no repetidos. En nuestro caso el conjunto va a tener un subconjunto restringido de métodos (inserción de elementos, consulta de un elemento, etc). Este conjunto \char`\"{}simulará\char`\"{} un conjunto de la stl, con algunas claras diferencias pues, entre otros, no estará dotado de la capacidad de iterar (recorrer) a través de sus elementos.
+
+Asociado al conjunto, tendremos el tipo
+\begin{DoxyCode}
+\hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto::value\_type} 
+\end{DoxyCode}
+ que permite hacer referencia al elemento almacenados en cada una de las posiciones del conjunto, en nuestro caso mutaciones (S\+N\+Ps). Es requisito que el tipo \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type} tenga definidos los operadores operator$<$ y operator= .
+
+El número de elementos en el conjunto puede variar dinámicamente; la gestión de la memoria es automática.
+
+\begin{DoxyRefDesc}{Tareas pendientes}
+\item[\hyperlink{todo__todo000005}{Tareas pendientes}]Implementa esta clase siguiendo la especificación asociada \end{DoxyRefDesc}
+
+
+\subsubsection{Documentación de los \textquotesingle{}Typedef\textquotesingle{} miembros de la clase}
+\index{conjunto@{conjunto}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{const\+\_\+iterator}{const_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef vector$<$mutacion$>$\+::{\bf const\+\_\+iterator} {\bf conjunto\+::const\+\_\+iterator}}\hypertarget{classconjunto_aa3cf9f1ee3fc1682b221c33d9f271e2e}{}\label{classconjunto_aa3cf9f1ee3fc1682b221c33d9f271e2e}
+\index{conjunto@{conjunto}!iterator@{iterator}}
+\index{iterator@{iterator}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{iterator}{iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef vector$<$mutacion$>$\+::{\bf iterator} {\bf conjunto\+::iterator}}\hypertarget{classconjunto_a6de33afebdfa3ec058e9c78f28854311}{}\label{classconjunto_a6de33afebdfa3ec058e9c78f28854311}
+\index{conjunto@{conjunto}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{size\+\_\+type}{size_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf conjunto\+::size\+\_\+type}}\hypertarget{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{}\label{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}
+\index{conjunto@{conjunto}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{value\+\_\+type}{value_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef mutacion {\bf conjunto\+::value\+\_\+type}}\hypertarget{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{}\label{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}
+
+
+\subsubsection{Documentación del constructor y destructor}
+\index{conjunto@{conjunto}!conjunto@{conjunto}}
+\index{conjunto@{conjunto}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{conjunto()}{conjunto()}}]{\setlength{\rightskip}{0pt plus 5cm}conjunto\+::conjunto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_a16d987f42c679efab01748178ba45891}{}\label{classconjunto_a16d987f42c679efab01748178ba45891}
+
+
+constructor primitivo. 
+
+\index{conjunto@{conjunto}!conjunto@{conjunto}}
+\index{conjunto@{conjunto}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{conjunto(const conjunto \&d)}{conjunto(const conjunto &d)}}]{\setlength{\rightskip}{0pt plus 5cm}conjunto\+::conjunto (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto} \&}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_ab0944b1f9a0c959ca314ce0debd5def9}{}\label{classconjunto_ab0944b1f9a0c959ca314ce0debd5def9}
+
+
+constructor de copia 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em d} & conjunto a copiar \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Documentación de las funciones miembro}
+\index{conjunto@{conjunto}!begin@{begin}}
+\index{begin@{begin}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{begin()}{begin()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto\+::iterator} conjunto\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_af90b2324c2675dd4751a79f2e2ad8277}{}\label{classconjunto_af90b2324c2675dd4751a79f2e2ad8277}
+
+
+begin del conjunto 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve un iterador al primer elemento del conjunto. Si no existe devuelve end 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+no modifica el conjunto. 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{cbegin() const }{cbegin() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto\+::const\+\_\+iterator} conjunto\+::cbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classconjunto_aea13fde96ef2566de65be9a8163b1c26}{}\label{classconjunto_aea13fde96ef2566de65be9a8163b1c26}
+
+
+begin del conjunto 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve un iterador constante al primer elemento del conjunto. Si no existe devuelve end 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+no modifica el conjunto. 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!cend@{cend}}
+\index{cend@{cend}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{cend() const }{cend() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto\+::const\+\_\+iterator} conjunto\+::cend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classconjunto_a8f641464f071358f97c6f4a2c59f2117}{}\label{classconjunto_a8f641464f071358f97c6f4a2c59f2117}
+\index{conjunto@{conjunto}!cheq\+\_\+rep@{cheq\+\_\+rep}}
+\index{cheq\+\_\+rep@{cheq\+\_\+rep}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{cheq\+\_\+rep() const }{cheq_rep() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool conjunto\+::cheq\+\_\+rep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classconjunto_adb0ff15cf65817b0b279bae4bf06decb}{}\label{classconjunto_adb0ff15cf65817b0b279bae4bf06decb}
+
+
+Chequea el Invariante de la representacion. 
+
+\begin{DoxyInvariant}{Invariante}
+
+\end{DoxyInvariant}
+IR\+: rep ==$>$ bool
+
+\begin{DoxyItemize}
+\item Para todo i, 0 $<$= i $<$ vm.\+size() se cumple
+\begin{DoxyItemize}
+\item vm\mbox{[}i\mbox{]}.chr está en (\char`\"{}1\char`\"{}, \char`\"{}2\char`\"{}, \char`\"{}3\char`\"{}, \char`\"{}4\char`\"{}, \char`\"{}5\char`\"{}, \char`\"{}6\char`\"{}, \char`\"{}7\char`\"{}, \char`\"{}8\char`\"{}, \char`\"{}9\char`\"{}, \char`\"{}10\char`\"{}, \char`\"{}11\char`\"{}, \char`\"{}12\char`\"{}, \char`\"{}13\char`\"{}, \char`\"{}14\char`\"{}, \char`\"{}15\char`\"{}, \char`\"{}16\char`\"{}, \char`\"{}17\char`\"{}, \char`\"{}18\char`\"{}, \char`\"{}19\char`\"{}, \char`\"{}20\char`\"{}, \char`\"{}21\char`\"{}, \char`\"{}22\char`\"{}, \char`\"{}\+X\char`\"{}, \char`\"{}\+Y\char`\"{}, \char`\"{}\+M\+T\char`\"{})
+\item vm\mbox{[}i\mbox{]}.pos $>$ 0; 
+\end{DoxyItemize}\item Para todo i, 0 $<$= i $<$ C.\+vm.\+size()-\/1 se cumple\+: a) si vm\mbox{[}i\mbox{]}.chr == vm\mbox{[}i+1\mbox{]}.chr, entonces\+: vm\mbox{[}i\mbox{]}.pos $<$ vm\mbox{[}i+1\mbox{]}.pos b) si vm\mbox{[}i\mbox{]}.chr != vm\mbox{[}i+1\mbox{]}.chr, entonces vm\mbox{[}i\mbox{]}.chr $<$ vm\mbox{[}i+1\mbox{]}.chr (donde el orden para el número de cromosoma se rige por \char`\"{}1\char`\"{}$<$\char`\"{}2\char`\"{}$<$\char`\"{}3\char`\"{}$<$...$<$\char`\"{}22\char`\"{}$<$\char`\"{}\+X\char`\"{}$<$\char`\"{}\+Y\char`\"{}$<$\char`\"{}\+M\+T\char`\"{})\begin{DoxyReturn}{Devuelve}
+true si el invariante es correcto, falso en caso contrario 
+\end{DoxyReturn}
+\end{DoxyItemize}
+\index{conjunto@{conjunto}!clear@{clear}}
+\index{clear@{clear}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void conjunto\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_abf4c49c1a3f356d1e5bc668c8288c040}{}\label{classconjunto_abf4c49c1a3f356d1e5bc668c8288c040}
+
+
+Borra todas las entradas del conjunto, dejandolo vacio. 
+
+\begin{DoxyPostcond}{Postcondición}
+El conjunto se modifica, quedando vacio. 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!count@{count}}
+\index{count@{count}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{count(const string \&chr, const unsigned int \&pos) const }{count(const string &chr, const unsigned int &pos) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto\+::size\+\_\+type} conjunto\+::count (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{chr, }
+\item[{const unsigned int \&}]{pos}
+\end{DoxyParamCaption}
+) const}\hypertarget{classconjunto_a08eec66ae9356bea69a3a8e3d6a10694}{}\label{classconjunto_a08eec66ae9356bea69a3a8e3d6a10694}
+
+
+cuenta cuantas entradas coinciden con los parámetros dados. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em chr} & de la mutación. \\
+\hline
+\mbox{\tt in}  & {\em pos} & de la mutación. \\
+\hline
+\mbox{\tt in}  & {\em ID} & de la mutación. \\
+\hline
+\mbox{\tt in}  & {\em e} & entrada. Utilizar e.\+get\+I\+D() para buscar cuántas mutaciones tienen el mismo ID, el resto de los valores de entrada no son tenidos en cuenta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Como el conjunto de mutaciones no puede tener entradas repetidas, devuelve 1 (si se encuentra la entrada) o 0 (si no se encuentra). 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+no modifica el conjunto. 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!count@{count}}
+\index{count@{count}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{count(const string \&\+I\+D) const }{count(const string &ID) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto\+::size\+\_\+type} conjunto\+::count (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{ID}
+\end{DoxyParamCaption}
+) const}\hypertarget{classconjunto_acaed5aea59521f068b4ab510af777e54}{}\label{classconjunto_acaed5aea59521f068b4ab510af777e54}
+\index{conjunto@{conjunto}!count@{count}}
+\index{count@{count}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{count(const conjunto\+::value\+\_\+type \&e) const }{count(const conjunto::value_type &e) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto\+::size\+\_\+type} conjunto\+::count (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto\+::value\+\_\+type} \&}]{e}
+\end{DoxyParamCaption}
+) const}\hypertarget{classconjunto_a1969568dd7cdcd2599e29540bdbf0146}{}\label{classconjunto_a1969568dd7cdcd2599e29540bdbf0146}
+\index{conjunto@{conjunto}!empty@{empty}}
+\index{empty@{empty}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{empty() const }{empty() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool conjunto\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classconjunto_afcf4ff3ff3c1f83b63e901efebe93533}{}\label{classconjunto_afcf4ff3ff3c1f83b63e901efebe93533}
+
+
+Chequea si el conjunto esta vacio (\hyperlink{classconjunto_a863e1e106e35adda47e7c5e2067295b9}{size()}==0) 
+
+\begin{DoxyPostcond}{Postcondición}
+No se modifica el conjunto. 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!end@{end}}
+\index{end@{end}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{end()}{end()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto\+::iterator} conjunto\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_adeef17ca21f1fb29f803790c89c1fc56}{}\label{classconjunto_adeef17ca21f1fb29f803790c89c1fc56}
+
+
+end del conjunto 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve un iterador al final del conjunto (posicion siguiente al ultimo. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+no modifica el conjunto. 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!erase@{erase}}
+\index{erase@{erase}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{erase(const string \&chr, const unsigned int \&pos)}{erase(const string &chr, const unsigned int &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}bool conjunto\+::erase (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{chr, }
+\item[{const unsigned int \&}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_a3ea4aaba4c87317d49d5fd6091ca9f70}{}\label{classconjunto_a3ea4aaba4c87317d49d5fd6091ca9f70}
+
+
+Borra una entrada en el conjunto . Busca la entrada con chr/pos o id en el conjunto (utiliza e.\+get\+I\+D() en el tercer caso) y si la encuentra la borra. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em chr} & de la mutación a borrar. \\
+\hline
+\mbox{\tt in}  & {\em pos} & de la mutación a borrar. \\
+\hline
+\mbox{\tt in}  & {\em ID} & de la mutación a borrar. \\
+\hline
+\mbox{\tt in}  & {\em e} & entrada con e.\+get\+I\+D() que geremos borrar, el resto de los valores no son tenidos en cuenta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondición}
+Si esta en el conjunto su tamaño se decrementa en 1. 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!erase@{erase}}
+\index{erase@{erase}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{erase(const string \&\+I\+D)}{erase(const string &ID)}}]{\setlength{\rightskip}{0pt plus 5cm}bool conjunto\+::erase (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{ID}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_a1bfa5a542034b4dec5a4950d92c4b4a4}{}\label{classconjunto_a1bfa5a542034b4dec5a4950d92c4b4a4}
+\index{conjunto@{conjunto}!erase@{erase}}
+\index{erase@{erase}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{erase(const conjunto\+::value\+\_\+type \&e)}{erase(const conjunto::value_type &e)}}]{\setlength{\rightskip}{0pt plus 5cm}bool conjunto\+::erase (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto\+::value\+\_\+type} \&}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_adb87e98f2c127dc030d5861d6f0172c6}{}\label{classconjunto_adb87e98f2c127dc030d5861d6f0172c6}
+\index{conjunto@{conjunto}!find@{find}}
+\index{find@{find}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{find(const string \&chr, const unsigned int \&pos) const }{find(const string &chr, const unsigned int &pos) const }}]{\setlength{\rightskip}{0pt plus 5cm}pair$<${\bf conjunto\+::value\+\_\+type},bool$>$ conjunto\+::find (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{chr, }
+\item[{const unsigned int \&}]{pos}
+\end{DoxyParamCaption}
+) const}\hypertarget{classconjunto_a18090b7e99deb491709f95f038b09258}{}\label{classconjunto_a18090b7e99deb491709f95f038b09258}
+
+
+busca una entrada en el conjunto 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em chr} & cromosoma de la mutación a buscar. \\
+\hline
+\mbox{\tt in}  & {\em pos} & posición en el cromosoma de la mutación. \\
+\hline
+\mbox{\tt in}  & {\em ID} & identificador de la mutación a buscar \\
+\hline
+\mbox{\tt in}  & {\em e} & entrada. Utilizar e.\+get\+I\+D() o la combinación e.\+get\+Chr()/e.get\+Pos() para buscar una mutación con igual ID o Chr/\+Pos, el resto de los valores de entrada pueden ser ignorados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Si existe una mutación en el conjunto con ese chr/pos o ID, respectivamente, devuelve un par con una copia de la mutación en el conjunto y con el segundo valor a true. Si no se encuentra, devuelve la mutación con la definicion por defecto y false 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+no modifica el conjunto. \begin{DoxyVerb}Uso 1:
+if (C.find("1", 6433456).second ==true) cout << "Found." ;
+else cout << "Not found.";
+\end{DoxyVerb}
+ \begin{DoxyVerb}Uso 2:
+if (C.findID("rs12345").second ==true) cout << "Found." ;
+else cout << "Not found.";
+\end{DoxyVerb}
+ 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!find@{find}}
+\index{find@{find}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{find(const string \&\+I\+D) const }{find(const string &ID) const }}]{\setlength{\rightskip}{0pt plus 5cm}pair$<${\bf conjunto\+::value\+\_\+type},bool$>$ conjunto\+::find (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{ID}
+\end{DoxyParamCaption}
+) const}\hypertarget{classconjunto_a1c2e31946fa1481210cc9b6c80de80ea}{}\label{classconjunto_a1c2e31946fa1481210cc9b6c80de80ea}
+\index{conjunto@{conjunto}!find@{find}}
+\index{find@{find}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{find(const conjunto\+::value\+\_\+type \&e) const }{find(const conjunto::value_type &e) const }}]{\setlength{\rightskip}{0pt plus 5cm}pair$<${\bf conjunto\+::value\+\_\+type},bool$>$ conjunto\+::find (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto\+::value\+\_\+type} \&}]{e}
+\end{DoxyParamCaption}
+) const}\hypertarget{classconjunto_a3fe1397b6ea109838d28c97e649eebd7}{}\label{classconjunto_a3fe1397b6ea109838d28c97e649eebd7}
+\index{conjunto@{conjunto}!get\+VM@{get\+VM}}
+\index{get\+VM@{get\+VM}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{get\+V\+M() const }{getVM() const }}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<$mutacion$>$ conjunto\+::get\+VM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classconjunto_a0193e4e35a9058612ecbf281dc41e670}{}\label{classconjunto_a0193e4e35a9058612ecbf281dc41e670}
+
+
+obtiene las mutaciones existentes 
+
+\begin{DoxyPostcond}{Postcondición}
+no modifica el conjunto. 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!insert@{insert}}
+\index{insert@{insert}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{insert(const conjunto\+::value\+\_\+type \&e)}{insert(const conjunto::value_type &e)}}]{\setlength{\rightskip}{0pt plus 5cm}bool conjunto\+::insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto\+::value\+\_\+type} \&}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_a1b80ac564092cff71e21d6452f376769}{}\label{classconjunto_a1b80ac564092cff71e21d6452f376769}
+
+
+Inserta una entrada en el conjunto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em e} & entrada a insertar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si la entrada se ha podido insertar con éxito, esto es, no existe una mutación con igual par chr/pos ni igual ID en el conjunto. False en caso contrario. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+Si e no esta en el conjunto, el \hyperlink{classconjunto_a863e1e106e35adda47e7c5e2067295b9}{size()} sera incrementado en 1. 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!lower\+\_\+bound@{lower\+\_\+bound}}
+\index{lower\+\_\+bound@{lower\+\_\+bound}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{lower\+\_\+bound(const string \&chr, const unsigned int \&pos)}{lower_bound(const string &chr, const unsigned int &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto\+::const\+\_\+iterator} conjunto\+::lower\+\_\+bound (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{chr, }
+\item[{const unsigned int \&}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_a56fe153b3a546c63493ee027bcf3c7cb}{}\label{classconjunto_a56fe153b3a546c63493ee027bcf3c7cb}
+
+
+cuenta cuantas entradas hay en el conjunto por debajo (\textquotesingle{}antes\textquotesingle{}, \textquotesingle{}$<$\textquotesingle{}) de los parámetros dados. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em chr} & de la mutación. \\
+\hline
+\mbox{\tt in}  & {\em pos} & de la mutación. \\
+\hline
+\mbox{\tt in}  & {\em e} & entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un iterador al primer elemento que cumple que \char`\"{}elemento$<$e\char`\"{} es falso, esto es, el primer elemento que es mayor o igual que e 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+no modifica el conjunto. 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!lower\+\_\+bound@{lower\+\_\+bound}}
+\index{lower\+\_\+bound@{lower\+\_\+bound}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{lower\+\_\+bound(const conjunto\+::value\+\_\+type \&e)}{lower_bound(const conjunto::value_type &e)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto\+::const\+\_\+iterator} conjunto\+::lower\+\_\+bound (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto\+::value\+\_\+type} \&}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_a12c246fa72986d7d4b9f58ad33594022}{}\label{classconjunto_a12c246fa72986d7d4b9f58ad33594022}
+\index{conjunto@{conjunto}!operator=@{operator=}}
+\index{operator=@{operator=}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{operator=(const conjunto \&org)}{operator=(const conjunto &org)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto}\& conjunto\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto} \&}]{org}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_a2bdce402a4b76117b68fe71c0dffab87}{}\label{classconjunto_a2bdce402a4b76117b68fe71c0dffab87}
+
+
+operador de asignación 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em org} & conjunto a copiar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Crea y devuelve un conjunto duplicado exacto de org. 
+\end{DoxyReturn}
+\index{conjunto@{conjunto}!size@{size}}
+\index{size@{size}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{size() const }{size() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\+\_\+type} conjunto\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classconjunto_a863e1e106e35adda47e7c5e2067295b9}{}\label{classconjunto_a863e1e106e35adda47e7c5e2067295b9}
+
+
+numero de entradas en el conjunto 
+
+\begin{DoxyPostcond}{Postcondición}
+No se modifica el conjunto. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+numero de entradas en el conjunto 
+\end{DoxyReturn}
+\index{conjunto@{conjunto}!upper\+\_\+bound@{upper\+\_\+bound}}
+\index{upper\+\_\+bound@{upper\+\_\+bound}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{upper\+\_\+bound(const string \&chr, const unsigned int \&pos)}{upper_bound(const string &chr, const unsigned int &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto\+::const\+\_\+iterator} conjunto\+::upper\+\_\+bound (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{chr, }
+\item[{const unsigned int \&}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_ac6f8693ddce1a58425c05a71e5a6f450}{}\label{classconjunto_ac6f8693ddce1a58425c05a71e5a6f450}
+
+
+cuenta cuantas entradas hay en el conjunto por encima (\textquotesingle{}después\textquotesingle{}, \textquotesingle{}$>$\textquotesingle{}) de los parámetros dados. 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em chr} & de la mutación. \\
+\hline
+\mbox{\tt in}  & {\em pos} & de la mutación. \\
+\hline
+\mbox{\tt in}  & {\em e} & entrada. Devuelve un iterador al primer elemento que cumple que \char`\"{}elemento$>$e\char`\"{}, esto es, el primer elemento E\+S\+T\+R\+I\+C\+T\+A\+M\+E\+N\+TE mayor que e \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondición}
+no modifica el conjunto. 
+\end{DoxyPostcond}
+\index{conjunto@{conjunto}!upper\+\_\+bound@{upper\+\_\+bound}}
+\index{upper\+\_\+bound@{upper\+\_\+bound}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{upper\+\_\+bound(const conjunto\+::value\+\_\+type \&e)}{upper_bound(const conjunto::value_type &e)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto\+::const\+\_\+iterator} conjunto\+::upper\+\_\+bound (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto\+::value\+\_\+type} \&}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{classconjunto_a8b0f19b9e37fe5ee0831c34e36f943e5}{}\label{classconjunto_a8b0f19b9e37fe5ee0831c34e36f943e5}
+
+
+\subsubsection{Documentación de los datos miembro}
+\index{conjunto@{conjunto}!vm@{vm}}
+\index{vm@{vm}!conjunto@{conjunto}}
+\paragraph[{\texorpdfstring{vm}{vm}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$mutacion$>$ conjunto\+::vm\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classconjunto_ac85e51076195e0c74574c72d2dffa728}{}\label{classconjunto_ac85e51076195e0c74574c72d2dffa728}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{conjunto_8h}{conjunto.\+h}\end{DoxyCompactItemize}

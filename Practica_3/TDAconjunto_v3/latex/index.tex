@@ -1,0 +1,51 @@
+\begin{DoxyVersion}{Versión}
+v1 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Autor}
+Carlos Cano y Juan F. Huete
+\end{DoxyAuthor}
+\hypertarget{index_introsec}{}\subsection{Introducción}\label{index_introsec}
+En la práctica anterior hemos creado el T\+DA Mutación y T\+DA Enfermedad. El objetivo de esta práctica es crear un T\+DA contenedor para almacenar y gestionar un conjunto de mutaciones.\hypertarget{index_conjunto}{}\subsection{Conjunto como T\+D\+A contenedor de información}\label{index_conjunto}
+Nuestro conjunto será un contenedor que permite almacenar la información de la base de datos de mutaciones. Para un mejor acceso, los elementos deben estar ordenados según chr/posición, en orden creciente. Como T\+DA, lo vamos a dotar de un conjunto restringido de métodos (inserción de elementos, consulta de un elemento por chr/pos o por ID, etc.). Este conjunto \char`\"{}simulará\char`\"{} un set de la stl, con algunas claras diferencias pues, entre otros, no estará dotado de la capacidad de iterar (recorrer) a través de sus elementos, que se hará en las siguientes prácticas.
+
+Asociado al conjunto, tendremos los tipos 
+\begin{DoxyCode}
+\hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto::value\_type} \textcolor{comment}{// tipo de dato almacenado en el conjunto}
+
+\hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{conjunto::size\_type}  \textcolor{comment}{// numero de elementos del conjunto}
+
+\hyperlink{classconjunto_a6de33afebdfa3ec058e9c78f28854311}{conjunto::iterator}  \textcolor{comment}{// iterador sobre los elementos del conjunto}
+
+\hyperlink{classconjunto_aa3cf9f1ee3fc1682b221c33d9f271e2e}{conjunto::const\_iterator} \textcolor{comment}{//Iterador constante}
+\end{DoxyCode}
+ que permiten hacer referencia a los elementos almacenados en cada una de las posiciones y el número de elementos del conjunto, respectivamente. Es requisito que el tipo \hyperlink{classconjunto_ad902faf0206fe6aa37e39d8e6e5a880a}{conjunto\+::value\+\_\+type} tenga definidos los operadores operator$<$ y operator= .\hypertarget{index_rep}{}\subsection{Representación}\label{index_rep}
+El alumno deberá realizar una implementación utilizando como base el T\+DA vector de la S\+TL. En particular, la representación que se utiliza es un V\+E\+C\+T\+OR O\+R\+D\+E\+N\+A\+DO de entradas, teniendo en cuenta el valor de los atributos chr/pos, tal y como se especificó al definir el operator$<$ en el T\+DA Enfermedad.\hypertarget{index_fact_sec2}{}\subsubsection{Función de Abstracción \+:}\label{index_fact_sec2}
+Función de Abstracción\+: AF\+: Rep =$>$ Abs \begin{DoxyVerb}dado C =(vector<mutaciones> vm ) ==> Conjunto BD;
+\end{DoxyVerb}
+
+
+Un objeto abstracto, BD, representando una colección O\+R\+D\+E\+N\+A\+DA de mutaciones según chr/pos, se instancia en la clase conjunto como un vector ordenado de mutaciones.\hypertarget{index_inv_sec2}{}\subsubsection{Invariante de la Representación\+:}\label{index_inv_sec2}
+Propiedades que debe cumplir cualquier objeto
+
+
+\begin{DoxyCode}
+BD.size() == C.vm.size();
+
+Para todo i, 0 <= i < C.vm.size() se cumple
+    C.vm[i].chr está en (\textcolor{stringliteral}{"1"}, \textcolor{stringliteral}{"2"}, \textcolor{stringliteral}{"3"}, \textcolor{stringliteral}{"4"}, \textcolor{stringliteral}{"5"}, \textcolor{stringliteral}{"6"}, \textcolor{stringliteral}{"7"}, \textcolor{stringliteral}{"8"}, \textcolor{stringliteral}{"9"}, \textcolor{stringliteral}{"10"}, \textcolor{stringliteral}{"11"}, \textcolor{stringliteral}{"12"}, \textcolor{stringliteral}{"13"}, \textcolor{stringliteral}{"14"}, \textcolor{stringliteral}{"15"}, \textcolor{stringliteral}{"
+      16"}, \textcolor{stringliteral}{"17"}, \textcolor{stringliteral}{"18"}, \textcolor{stringliteral}{"19"}, \textcolor{stringliteral}{"20"}, \textcolor{stringliteral}{"21"}, \textcolor{stringliteral}{"22"}, \textcolor{stringliteral}{"X"}, \textcolor{stringliteral}{"Y"}, \textcolor{stringliteral}{"MT"})
+  C.vm[i].pos > 0;
+Para todo i, 0 <= i < C.vm.size()-1 se cumple:
+  a) si C.vm[i].chr == C.vm[i+1].chr, entonces: C.vm[i].pos < C.vm[i+1].pos
+  b) si C.vm[i].chr != C.vm[i+1].chr, entonces  C.vm[i].chr < C.vm[i+1].chr 
+  (donde el orden para el número de cromosoma se rige por "1"<"2"<"3"<...<"22"<"X"<"Y"<"MT")
+\end{DoxyCode}
+\hypertarget{index_sec_tar}{}\subsection{\char`\"{}\+Se Entrega / Se Pide\char`\"{}}\label{index_sec_tar}
+\hypertarget{index_ssEntrega}{}\subsubsection{Se entrega}\label{index_ssEntrega}
+\begin{DoxyItemize}
+\item \hyperlink{conjunto_8h}{conjunto.\+h} Plantilla con la especificación del T\+DA conjunto. \item Función de abstracción e Invariante de respresentación del T\+DA conjunto. \item \hyperlink{principal_8cpp}{principal.\+cpp} Plantilla del fichero con el main del programa. Este programa debe tomar como entrada el fichero de datos \char`\"{}clinvar\+\_\+20160831.\+vcf\char`\"{}, cargar las mutaciones en un conjunto de mutaciones y exhibir la funcionalidad del T\+DA Conjunto.\end{DoxyItemize}
+\hypertarget{index_ssPide}{}\subsubsection{Se Pide}\label{index_ssPide}
+\begin{DoxyItemize}
+\item conjunto.\+hxx Implementación del T\+DA conjunto. \item \hyperlink{principal_8cpp}{principal.\+cpp} Completar su implementación. \item Analizar la eficiencia teórica y empírica de las operaciones de inserción, búsqueda y borrado en el conjunto.\end{DoxyItemize}
+\hypertarget{index_fecha}{}\subsection{\char`\"{}\+Fecha Límite de Entrega\char`\"{}}\label{index_fecha}
+La fecha límite de entrega será el 6 de Noviembre a las 23\+:50 hrs. 
